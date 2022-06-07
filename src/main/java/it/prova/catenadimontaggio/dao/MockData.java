@@ -19,8 +19,20 @@ public class MockData {
 			auto1.setSlotCatenaDiMontaggio(slot1);
 			slot1.getListaAutomobili().add(auto1);
 			
+			Automobile auto2 = new Automobile(2L, "Grande punto", "0167122289",
+					new SimpleDateFormat("dd-MM-yyyy").parse("01-07-2018"));
+			auto2.setSlotCatenaDiMontaggio(slot1);
+			slot1.getListaAutomobili().add(auto2);
+			
+			Automobile auto3 = new Automobile(3L, "Panda", "7457123499",
+					new SimpleDateFormat("dd-MM-yyyy").parse("01-10-2020"));
+			auto3.setSlotCatenaDiMontaggio(slot1);
+			slot1.getListaAutomobili().add(auto3);
+			
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
+		
+		LISTA_SLOT_CATENA_DI_MONTAGGIO.add(slot1);
 	}
 }
